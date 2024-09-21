@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +17,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <!-- Begin: Navbar Left -->
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
@@ -123,7 +125,10 @@
                 </nav>
 
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                                 <g fill-rule="evenodd">
@@ -133,6 +138,7 @@
                         </a>
                     </div>
 
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
                     <!-- Search -->
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -173,7 +179,7 @@
 
                     <!-- Cart -->
                     <div class="header__cart">
-                        <div class="header_cart-wrap">
+                        <div class="header__cart-wrap">
                             <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
 
                             <span class="header__cart-badge">3</span>
@@ -256,142 +262,6 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/product/cart_item_1.png" alt="" class="header__cart-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                <div class="header__cart-price-wrap">
-                                                    <span class="header__cart-item-price">2.000.000đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">1</span>
-                                                </div>
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Bạc</span>
-                                                <span class="header__cart-item-remove">Xóa</span>
-                                            </div>
-                                        </div>
-                                    </li>
                                 </ul>
                                 <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
                             </div>
@@ -399,12 +269,26 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__col-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">Danh mục</h3>
                             <ul class="category-list">
@@ -420,8 +304,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__col-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="btn home-filter__btn">Phổ biến</button>
                             <button class="btn home-filter__btn btn--primary">Mới nhất</button>
@@ -456,11 +340,82 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & Thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid">
-                                <div class="grid__row">
+                            <div class="grid wide">
+                                <div class="row sm-gutter">
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lzysm3iel1upa4_tn);"></div>
                                             <h4 class="home-product-item__name">Tai Nghe Bluetooth Pro4, tai nghe blutooth Nhét Tai Bluetooth 5.0 Bản nước ngoài tương ứng toàn bộ Dòng Máy HOT SP05</h4>
@@ -497,7 +452,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lzei4mauvesh89_tn);"></div>
                                             <h4 class="home-product-item__name">Sạc nhanh PD 20W Không Nóng Máy ,An Toàn Ổn Định bảo hành 12 tháng LỖI 1 ĐỔI 1 NHANH CHÓNG</h4>
@@ -534,7 +489,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/cn-11134207-7r98o-ltmj40fpc6vxf6_tn);"></div>
                                             <h4 class="home-product-item__name">Cáp Sạc typeC 20w Tương Thích Cho Điện thoại</h4>
@@ -571,7 +526,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-m028vybcrgcv05_tn);"></div>
                                             <h4 class="home-product-item__name">Pin Sạc Dự Phòng Wp163 20000mAh 2 Output USB 2 Input Micro Type-C - Hỗ Trợ Sạc Nhiều Dòng Máy TENZATEK SP01</h4>
@@ -608,7 +563,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lz4amul3pp5t05_tn);"></div>
                                             <h4 class="home-product-item__name">Gậy chụp ảnh Selfie 4 chân A14 1M8 điều khiển từ xa có phân loại đèn trợ sáng Tripod chụp ảnh livestream TT01 2good</h4>
@@ -645,7 +600,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyx5dpenjbrh74_tn);"></div>
                                             <h4 class="home-product-item__name">(Tặng Remote) Gậy Chụp Ảnh 3 Chân B11S Thế Hệ Mới Có Đèn Led Trợ Sáng Có Bluetooth Điều Khiển Từ Xa Xoay 360 Độ EKADO</h4>
@@ -682,7 +637,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-lz7kf316dkf5bf_tn);"></div>
                                             <h4 class="home-product-item__name">Sạc Dự Phòng Trong Suốt TZ07 20000mah Với 2 Cổng Sạc Nhanh 22.5w và PD 20W Kèm 4 Đầu Sạc Màn Hình LED TENZATEK</h4>
@@ -719,7 +674,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-lyx5zilm3zxd32_tn);"></div>
                                             <h4 class="home-product-item__name">Dây cáp sạc siêu nhanh 3 đầu 100W, Micro USB Type C 3 trong 1 dây cáp dữ liệu EKADO</h4>
@@ -756,7 +711,7 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-m01rf6ln5kh95d_tn);"></div>
                                             <h4 class="home-product-item__name">Sạc dự phòng TAKASHIO 20000mAh sạc nhanh tích hợp sạc không dây, pin mini dung lượng lớn có sẵn nhiều dây sạc SP00</h4>
@@ -793,7 +748,44 @@
                                         </a>
                                     </div>
                                     <!-- Product Item -->
-                                    <div class="grid__col-2-4">
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a href="" class="home-product-item">
+                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-m01rdxapg8vhb2_tn);"></div>
+                                            <h4 class="home-product-item__name">Sạc dự phòng TZ89 10000mAh sạc nhanh pin mini dung lượng lớn có sẵn nhiều dây sạc TENZATEK SP01</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">250.000đ</span>
+                                                <span class="home-product-item__price-current">160.000đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <div class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                                                </div>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--rated fa-solid fa-star"></i>
+                                                    <i class="home-product-item__star--rated fa-solid fa-star"></i>
+                                                    <i class="home-product-item__star--rated fa-solid fa-star"></i>
+                                                    <i class="home-product-item__star--rated fa-solid fa-star"></i>
+                                                    <i class="home-product-item__star--unrate fa-regular fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Paoiu</span>
+                                                <span class="home-product-item__origin-name">Hà Nội</span>
+                                            </div>
+                                            <div class="home-product-item__favourite">
+                                                <i class="fa-solid fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__saleoff">
+                                                <div class="home-product-item__saleoff-percent">10%</div>
+                                                <div class="home-product-item__saleoff-label">GIẢM</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- Product Item -->
+                                    <div class="col l-2-4 m-4 c-6">
                                         <a href="" class="home-product-item">
                                             <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134201-7r98o-m01rdxapg8vhb2_tn);"></div>
                                             <h4 class="home-product-item__name">Sạc dự phòng TZ89 10000mAh sạc nhanh pin mini dung lượng lớn có sẵn nhiều dây sạc TENZATEK SP01</h4>
@@ -872,9 +864,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2-4">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -888,7 +880,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -902,7 +894,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -916,7 +908,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -939,7 +931,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="./assets/img/qr_code.png" alt="QR Code" class="footer__download-qr-img">
@@ -956,7 +948,7 @@
                 </div>                
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__copyright">© 2024 - Bản quyền thuộc về Đoàn Chí Quang</p>                
                 </div>
             </div>
